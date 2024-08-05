@@ -61,7 +61,7 @@
         const ratio_x = viewport_x / viewport_width;
         const ratio_y = viewport_y / viewport_height;
 
-        const content_rect = content.getBoundingClientRect();
+        const content_rect = clickableContent.getBoundingClientRect();
         const content_width = content_rect.width;
         const content_height = content_rect.height;
         const content_x = content_width * ratio_x;
