@@ -29,51 +29,85 @@
   </head>
   <body>
     <div class="container my-5">
-      <h1 class="mb-5">Ceci n'est pas une newsletter sceno</h1>
+      <h1 class="mb-5">Les ministères scenographiques</h1>
       <div class="row gap-3 mb-5">
-        <div class="col-4">
-          <a href="bastien.html"><img src="images/bastien.png" alt="bastien" class="img clickable-content"></a>
+        <div class="col-4" id="bastien">
+          <a href="bastien.html"><img src="images/bastien.png" alt="bastien" class="img"></a>
         </div>
-        <div class="col-4">
-          <a href="raphael.html"><img src="images/raphael.png" alt="raphael" class="img clickable-content"></a>
+        <div class="col-4" id="raphael">
+          <a href="raphael.html"><img src="images/raphael.png" alt="raphael" class="img"></a>
         </div>
-        <div class="col-4">
-          <a href="raphaelle.html"><img src="images/raphaelle.jpg" alt="bastien" class="img clickable-content"></a>
+        <div class="col-4" id="raphaelle">
+          <a href="raphaelle.html"><img src="images/raphaelle.jpg" alt="bastien" class="img"></a>
         </div>
         <div class="row gap-3 justify-content-center">
-          <div class="col-4">
-            <a href="ghita.html"><img src="images/ghita.jpg" alt="ghita" class="img clickable-content"></a>
+          <div class="col-4" id="ghita">
+            <a href="ghita.html"><img src="images/ghita.jpg" alt="ghita" class="img"></a>
           </div>
-          <div class="col-4">
-            <a href="fred.html"><img src="images/fred.png" alt="bastien" class="img clickable-content"></a>
+          <div class="col-4" id="fred">
+            <a href="fred.html"><img src="images/fred.png" alt="bastien" class="img"></a>
           </div>
         </div>
       </div>
     </div>
     <script>
-      const clickableContent = document.querySelector(".clickable-content")
-      document.onmousemove = (evt) => {
-        const viewport_x = evt.clientX;
-        const viewport_y = evt.clientY;
+      const bastien = document.getElementById('bastien')
+      const ghita = document.getElementById('ghita')
+      const raphael = document.getElementById('raphael')
+      const raphaelle = document.getElementById('raphaelle')
+      const fred = document.getElementById('fred')
 
-        const viewport_width  = window.innerWidth;
-        const viewport_height = window.innerHeight;
+      bastien.addEventListener('mouseover', () => {
+        if(bastien.style.transform == 'translateY(50px)') {
+          bastien.style.transform = 'translateY(0px)';
+        } else {
+          bastien.style.transform = 'translateY(50px)';
+        }
+        bastien.style.background = "#fedcba";
+      });
 
-        const ratio_x = viewport_x / viewport_width;
-        const ratio_y = viewport_y / viewport_height;
+      ghita.addEventListener('mouseover', () => {
+        if(ghita.style.transform == 'translateY(50px)') {
+          ghita.style.transform = 'translateY(0px)';
+        } else {
+          ghita.style.transform = 'translateY(50px)';
+        }
+        ghita.style.background = "#fedcba";
+      });
 
-        const content_rect = clickableContent.getBoundingClientRect();
-        const content_width = content_rect.width;
-        const content_height = content_rect.height;
-        const content_x = content_width * ratio_x;
-        const content_y = content_height * ratio_y;
+      raphael.addEventListener('mouseover', () => {
+        if(raphael.style.transform == 'translateY(50px)') {
+          raphael.style.transform = 'translateY(0px)';
+        } else {
+          raphael.style.transform = 'translateY(50px)';
+        }
+        raphael.style.background = "#fedcba";
+      });
 
-        const translate_x = viewport_width  / 2 - content_x;
-        const translate_y = viewport_height / 2 - content_y;
+      raphaelle.addEventListener('mouseover', () => {
+        if(raphaelle.style.transform == 'translateY(50px)') {
+          raphaelle.style.transform = 'translateY(0px)';
+        } else {
+          raphaelle.style.transform = 'translateY(50px)';
+        }
+        raphaelle.style.background = "#fedcba";
+      });
 
-        clickableContent.style.setProperty("--translate-x", translate_x + "px");
-        clickableContent.style.setProperty("--translate-y", translate_y + "px");
-      };
+      fred.addEventListener('mouseover', () => {
+        if(fred.style.transform == 'translateY(50px)') {
+          fred.style.transform = 'translateY(0px)';
+        } else {
+          fred.style.transform = 'translateY(50px)';
+        }
+        fred.style.background = "#fedcba";
+      });
+    // el.addEventListener('mouseover', () => {
+    //   el.style.background = "#abcdef";
+    // });
+
+    // el.addEventListener('mouseout', () => {
+    //   el.style.background = "#fedcba";
+    // });
     </script>
   </body>
 </html>
