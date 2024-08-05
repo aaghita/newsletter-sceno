@@ -57,52 +57,48 @@
       const raphaelle = document.getElementById('raphaelle')
       const fred = document.getElementById('fred')
 
-      bastien.addEventListener('mouseover', () => {
-        if(bastien.style.transform == 'translateY(50px)') {
-          bastien.style.transform = 'translateY(0px)';
-        } else {
-          bastien.style.transform = 'translateY(50px)';
+      bastien.addEventListener("mousemove", (event) => {
+        var mouse;
+        var cursor = document.getElementById("cursor");
+        (e) => {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+          cursor.style.left = (mouseX - 55) + "px";
+          cursor.style.top = (mouseY - 55) + "px";
         }
       });
 
-      ghita.addEventListener('mouseover', () => {
-        if(ghita.style.transform == 'translateY(50px)') {
-          ghita.style.transform = 'translateY(0px)';
-        } else {
-          ghita.style.transform = 'translateY(50px)';
-        }
-      });
+      // ghita.addEventListener('mouseover', () => {
+      //   if(ghita.style.transform == 'translateY(50px)') {
+      //     ghita.style.transform = 'translateY(0px)';
+      //   } else {
+      //     ghita.style.transform = 'translateY(50px)';
+      //   }
+      // });
 
-      raphael.addEventListener('mouseover', () => {
-        if(raphael.style.transform == 'translateY(500px)') {
-          raphael.style.transform = 'translateY(0px)';
-        } else {
-          raphael.style.transform = 'translateY(500px)';
-        }
-      });
+      // raphael.addEventListener('mouseover', () => {
+      //   if(raphael.style.transform == 'translateY(500px)') {
+      //     raphael.style.transform = 'translateY(0px)';
+      //   } else {
+      //     raphael.style.transform = 'translateY(500px)';
+      //   }
+      // });
 
-      raphaelle.addEventListener('mouseover', () => {
-        if(raphaelle.style.transform == 'translateY(500px)') {
-          raphaelle.style.transform = 'translateY(0px)';
-        } else {
-          raphaelle.style.transform = 'translateY(500px)';
-        }
-      });
+      // raphaelle.addEventListener('mouseover', () => {
+      //   if(raphaelle.style.transform == 'translateY(500px)') {
+      //     raphaelle.style.transform = 'translateY(0px)';
+      //   } else {
+      //     raphaelle.style.transform = 'translateY(500px)';
+      //   }
+      // });
 
-      fred.addEventListener('mouseover', () => {
-        if(fred.style.transform == 'translateY(500px)') {
-          fred.style.transform = 'translateY(0px)';
-        } else {
-          fred.style.transform = 'translateY(500px)';
-        }
-      });
-    // el.addEventListener('mouseover', () => {
-    //   el.style.background = "#abcdef";
-    // });
-
-    // el.addEventListener('mouseout', () => {
-    //   el.style.background = "#fedcba";
-    // });
+      // fred.addEventListener('mouseover', () => {
+      //   if(fred.style.transform == 'translateY(500px)') {
+      //     fred.style.transform = 'translateY(0px)';
+      //   } else {
+      //     fred.style.transform = 'translateY(500px)';
+      //   }
+      // });
     </script>
   </body>
 </html>
