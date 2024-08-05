@@ -52,27 +52,21 @@
     <script>
       const clickableContent = document.querySelector(".clickable-content")
       document.onmousemove = (evt) => {
-        // the mouse position (in the viewport)
         const viewport_x = evt.clientX;
         const viewport_y = evt.clientY;
-        // the viewport size
+
         const viewport_width  = window.innerWidth;
         const viewport_height = window.innerHeight;
-        // the mouse position, still relative to the viewport
-        // but in a range [0, 1]
+
         const ratio_x = viewport_x / viewport_width;
         const ratio_y = viewport_y / viewport_height;
 
-        // our content's size
         const content_rect = content.getBoundingClientRect();
         const content_width = content_rect.width;
         const content_height = content_rect.height;
-        // transform the mouse position to the content's position
         const content_x = content_width * ratio_x;
         const content_y = content_height * ratio_y;
-        // remove it from half the size of the viewport
-        // so that aiming at the center of the viewport
-        // shows the center of our content
+
         const translate_x = viewport_width  / 2 - content_x;
         const translate_y = viewport_height / 2 - content_y;
 
