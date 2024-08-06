@@ -99,18 +99,18 @@
           el: document.getElementById('fred'),
           name: "fred"
         }
-      ].forEach((people) => {
+      ].forEach(({el, name}) => {
         if (isMobile) {
-          people.innerHTML = `<a href="${people.name}.html"><img src="images/audrey.png" alt="audrey" class="img"></a>`
+          el.innerHTML = `<a href="${name}.html"><img src="images/audrey.png" alt="audrey" class="img"></a>`
           setTimeout(() => {
-            window.location.href = `https://aaghita.github.io/newsletter-sceno/${people.name}.html`
+            window.location.href = `https://aaghita.github.io/newsletter-sceno/${name}.html`
           }, 2000)
         } else {
-          people.el.addEventListener('mouseover', () => {
-            if(people.el.style.transform == 'translateY(200px)') {
-              people.el.style.transform = 'translateY(0px)';
+          el.addEventListener('mouseover', () => {
+            if(el.style.transform == 'translateY(200px)') {
+              el.style.transform = 'translateY(0px)';
             } else {
-              people.el.style.transform = 'translateY(200px)';
+              el.style.transform = 'translateY(200px)';
             }
           });
         }
