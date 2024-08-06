@@ -90,10 +90,12 @@
 
       [bastien, ghita, raphael, raphaelle, fred].forEach((people) => {
         if (isMobile) {
-          people.innerHTML = `<div class="col-4" id="audrey">
+          people.innerHTML = `
             <a href="raphaelle.html"><img src="images/audrey.png" alt="audrey" class="img shadow-yellow"></a>
-          </div>`
-          window.location.href = `https://aaghita.github.io/newsletter-sceno/${people}.html`
+          `
+          setTimeout(() => {
+            window.location.href = `https://aaghita.github.io/newsletter-sceno/${people}.html`
+          }, 2000)
         } else {
           people.addEventListener('mouseover', () => {
             if(people.style.transform == 'translateY(200px)') {
