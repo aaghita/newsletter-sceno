@@ -80,29 +80,23 @@
         /Windows Phone/i
       ].some((toMatchItem) => {
           return navigator.userAgent.match(toMatchItem);
-      });
-
-      const bastien = document.getElementById('bastien')
-      const ghita = document.getElementById('ghita')
-      const raphael = document.getElementById('raphael')
-      const raphaelle = document.getElementById('raphaelle')
-      const fred = document.getElementById('fred')
+      });g
 
       [
         {
-          el:bastien,
+          el: document.getElementById('bastien'),
           name: 'bastien'
         },  {
-          el:ghita,
+          el: document.getElementById('ghita'),
           name: 'ghita'
         },  {
-          el: raphael,
+          el: document.getElementById('raphael'),
           name: 'raphael'
         }, {
-          el: raphaelle,
+          el: document.getElementById('raphaelle'),
           name: "raphaelle"
         }, {
-          el: fred,
+          el: document.getElementById('fred'),
           name: "fred"
         }
       ].forEach((people) => {
