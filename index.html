@@ -87,20 +87,35 @@
       const raphael = document.getElementById('raphael')
       const raphaelle = document.getElementById('raphaelle')
       const fred = document.getElementById('fred')
-      console.log([bastien, ghita, raphael, raphaelle, fred])
-
-      [bastien, ghita, raphael, raphaelle, fred].forEach((people) => {
+      [
+        {
+          el:bastien,
+          name: 'bastien'
+        },  {
+          el:ghita,
+          name: 'ghita'
+        },  {
+          el: raphael,
+          name: 'raphael'
+        }, {
+          el: raphaelle,
+          name: "raphaelle"
+        }, {
+          el: fred,
+          name: "fred"
+        }
+      ].forEach((people) => {
         if (isMobile) {
-          people.innerHTML = `<a href="${people}.html"><img src="images/audrey.png" alt="audrey" class="img"></a>`
+          people.innerHTML = `<a href="${people.name}.html"><img src="images/audrey.png" alt="audrey" class="img"></a>`
           setTimeout(() => {
-            window.location.href = `https://aaghita.github.io/newsletter-sceno/${people}.html`
+            window.location.href = `https://aaghita.github.io/newsletter-sceno/${people.name}.html`
           }, 2000)
         } else {
-          people.addEventListener('mouseover', () => {
-            if(people.style.transform == 'translateY(200px)') {
-              people.style.transform = 'translateY(0px)';
+          people.el.addEventListener('mouseover', () => {
+            if(people.el.style.transform == 'translateY(200px)') {
+              people.el.style.transform = 'translateY(0px)';
             } else {
-              people.style.transform = 'translateY(200px)';
+              people.el.style.transform = 'translateY(200px)';
             }
           });
         }
