@@ -90,9 +90,7 @@
 
       [bastien, ghita, raphael, raphaelle, fred].forEach((people) => {
         if (isMobile) {
-          people.innerHTML = `
-            <a href="raphaelle.html"><img src="images/audrey.png" alt="audrey" class="img shadow-yellow"></a>
-          `
+          people.innerHTML = `<a href="${people}.html"><img src="images/audrey.png" alt="audrey" class="img"></a>`
           setTimeout(() => {
             window.location.href = `https://aaghita.github.io/newsletter-sceno/${people}.html`
           }, 2000)
